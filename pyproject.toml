@@ -13,6 +13,7 @@ dependencies = [
     "langchain-google-genai>=4.2.1",
     "langchain-openai>=1.1.10",
     "langgraph>=1.0.9",
+    "structlog>=25.5.0",
     "youtube-search>=2.2.0",
     "youtube-search-python>=1.6.6",
 ]
