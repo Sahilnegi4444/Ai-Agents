@@ -18,6 +18,12 @@ class ApiKeyManager:
 
     def __init__(self):
         
+        """
+        Initialize the ApiKeyManager, load environment variables, and log loaded key statuses without exposing secrets.
+
+        Environment variables loaded include OPENAI_API_KEY, GOOGLE_API_KEY, and GROQ_API_KEY.
+        """
+
         load_dotenv()
 
         self.api_keys = {
@@ -178,7 +184,7 @@ if __name__ == "__main__":
         # Test LLM
         llm = loader.load_llm()
         print(f"LLM Loaded: {llm}")
-        result = llm.invoke("Hello, how are you?")
+        result = llm.invoke("I am working on AI Agents")
         print(f"LLM Result: {result.content[:200]}")
 
         log.info("ModelLoader test completed successfully")
